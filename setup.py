@@ -42,6 +42,5 @@ setup(name='An-Introduction-To-Image-Processing',
       url='http://lisa.ulb.ac.be/image/index.php/INFO-H-500',
       packages=find_packages(),
       install_requires=['scikit-image == 0.10.0', 'ipython[all]', 'runipy',
-                        'pyqi', 'pandas',
                         'future<=0.13.1'],
       classifiers=classifiers)
