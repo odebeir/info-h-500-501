@@ -24,24 +24,25 @@ classes = """
     Programming Language :: Python
     Programming Language :: Python :: 2.7
     Topic :: Scientific/Engineering
+    Topic :: Scientific/Engineering :: Bio-Informatics
 """
 classifiers = [s.strip() for s in classes.split('\n') if s]
 
-description = ("INFO-H-500 / INFO-H-501: "
-               "Interactive lessions in image processing.")
+description = ("An Introduction To Applied Bioinformatics (IAB): "
+               "Interactive lessions in bioinformatics.")
 
-setup(name='An-Introduction-To-Image-Processing',
+setup(name='An-Introduction-To-Applied-Bioinformatics',
       version=__version__,
       license='CC BY-NC-SA 4.0',
       description=description,
       long_description=description,
-      author='Olivier Debeir',
-      author_email='odebeir@ulb.ac.be',
-      maintainer='Olivier Debeir',
-      maintainer_email='odebeir@ulb.ac.be',
-      url='http://lisa.ulb.ac.be/image/index.php/INFO-H-500',
+      author='Greg Caporaso',
+      author_email='gregcaporaso@gmail.com',
+      maintainer='Greg Caporaso',
+      maintainer_email='gregcaporaso@gmail.com',
+      url='http://caporasolab.us/An-Introduction-To-Applied-Bioinformatics',
       packages=find_packages(),
-      install_requires=['ipython[all]', 'runipy',
-                        'pandas',
+      install_requires=['scikit-bio == 0.2.1', 'ipython[all]', 'runipy',
+                        'biom-format < 2.0.0', 'pyqi', 'pandas',
                         'future<=0.13.1'],
       classifiers=classifiers)
