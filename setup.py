@@ -24,23 +24,22 @@ classes = """
     Programming Language :: Python
     Programming Language :: Python :: 2.7
     Topic :: Scientific/Engineering
-    Topic :: Scientific/Engineering :: Bio-Informatics
 """
 classifiers = [s.strip() for s in classes.split('\n') if s]
 
-description = ("An Introduction To Applied Bioinformatics (IAB): "
+description = ("An Introduction To Image Processing (INFO-H-500/501) "
                "Interactive lessions in bioinformatics.")
 
-setup(name='An-Introduction-To-Applied-Bioinformatics',
+setup(name='An-Introduction-To-Image-Processing',
       version=__version__,
       license='CC BY-NC-SA 4.0',
       description=description,
       long_description=description,
-      author='Greg Caporaso',
-      author_email='gregcaporaso@gmail.com',
-      maintainer='Greg Caporaso',
-      maintainer_email='gregcaporaso@gmail.com',
-      url='http://caporasolab.us/An-Introduction-To-Applied-Bioinformatics',
+      author='',
+      author_email='',
+      maintainer='',
+      maintainer_email='',
+      url='',
       packages=find_packages(),
       install_requires=['ipython[all]', 'runipy'],
       classifiers=classifiers)
