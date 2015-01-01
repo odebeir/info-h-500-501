@@ -9,5 +9,5 @@ before_install:
   - ./miniconda.sh -b
   - export PATH=/home/travis/anaconda/bin:$PATH
   # Update conda itself
-  - conda update --yes conda
+  # - conda update --yes conda
 
