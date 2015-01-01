@@ -41,5 +41,5 @@ setup(name='An-Introduction-To-Image-Processing',
       maintainer_email='',
       url='',
       packages=find_packages(),
-      install_requires=['ipython[all]', 'runipy'],
+      install_requires=[],
       classifiers=classifiers)

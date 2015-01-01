@@ -1,5 +1,0 @@
-cython>=0.19.2
-matplotlib>=1.1.0
-numpy>=1.6.1
-scipy>=0.9
-runipy>=0.1.1
