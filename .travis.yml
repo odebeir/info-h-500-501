@@ -9,7 +9,7 @@ before_install:
   - ./miniconda.sh -b
   - export PATH=/home/travis/anaconda/bin:$PATH
   # Update conda itself
-  #- conda update --yes conda
+  - conda update --yes conda
 install:
   - conda create --yes -n env_name python=$TRAVIS_PYTHON_VERSION pip numpy scipy matplotlib nose
   - source activate env_name
