@@ -32,3 +32,6 @@ install:
 script:
   # Your test script goes here
   - nosetests --with-doctest && python runipynbs.py
+
+notifications:
+  email: false
