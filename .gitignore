@@ -43,3 +43,8 @@ nosetests.xml
 
 #pycharm
 .idea
+
+*.tif
+*.tiff
+
+
