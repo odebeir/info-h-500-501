@@ -11,15 +11,7 @@ Outline
 
 To browse the content, [start here](http://nbviewer.ipython.org/github/odebeir/info-h-500-501/blob/master/Index.ipynb).
 
-0. Getting started
-1. Fundamentals
-  1. Pairwise alignment (contains an exercise)
-  2. Database searching and determining the statistical significance of an alignment
-  3. Phylogeny reconstruction: distances, distances matrices and hierarchical clustering with UPGMA
-  4. Multiple sequence alignment (contains an exercise)
-  5. Read mapping and clustering
-2. Applications
-  1. Studying biological diversity
+TOC should be updated from .ipynb
 
 How to read the content
 -----------------------
