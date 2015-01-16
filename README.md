@@ -16,7 +16,7 @@ TOC should be updated from .ipynb
 How to read the content
 -----------------------
 
-There are two ways to read *An Introduction To Applied Bioinformatics*:
+There are two ways to read *Introduction to image processing*:
 
 * The *recommended* way to read the book is to download and run the IPython notebooks interactively. You can do this by cloning the GitHub repository, installing the package and its dependencies, and running the notebooks interactively. Instructions for doing this are provided below in the **Installation** section.
 
