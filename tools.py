@@ -19,7 +19,7 @@ def ext_image(name):
     else:
         data = urlopen(data_sources[name]).read()
         open(fname,'wb').write(data)
-        return data
+        return imread(fname)
 
 # javascript to hide/show code in ipython notebook
 toggle_on_off = '''<script>
