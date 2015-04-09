@@ -1,17 +1,25 @@
-import urllib
+from future.standard_library import install_aliases
+install_aliases()
+
+from urllib.request import urlopen
 from skimage.io import imread
 import os
 
-mandrill_url = 'http://sipi.usc.edu/database/download.php?vol=misc&img=4.2.03'
-fname = 'mandrill.tiff'
-
-def mandrill():
+def ext_image(name):
+    """
+    retrive an image from a url, save a local copy
+    """
+    data_sources = {'mandrill':
+                'http://sipi.usc.edu/database/download.php?vol=misc&img=4.2.03'}
+                 
+    assert(name in data_sources)
+    fname = '%s.tif'%name
     if os.path.exists(fname):
-        pass
+        return imread(fname)
     else:
-        urllib.urlretrieve(mandrill_url, "mandrill.tiff")
-    return imread('mandrill.tiff')
-
+        data = urlopen(data_sources[name]).read()
+        open(fname,'wb').write(data)
+        return data
 
 # javascript to hide/show code in ipython notebook
 toggle_on_off = '''<script>
