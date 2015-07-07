@@ -11,9 +11,9 @@ def ext_image(name):
     """
     data_sources = {'mandrill':
                 'http://sipi.usc.edu/database/download.php?vol=misc&img=4.2.03'}
-                 
+    local_dir = 'data/'             
     assert(name in data_sources)
-    fname = '%s.tif'%name
+    fname = os.path.join(local_dir,'%s.tif'%name)
     if os.path.exists(fname):
         return imread(fname)
     else:
