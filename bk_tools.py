@@ -90,7 +90,7 @@ def bk_image_hoover(ima,show_xy=False,show_value=True):
             x=x.flatten(),
             y=y.flatten(),
             color=color,
-            name=['pixel %d' for d in range(10)],        
+            name=['pixel %d' for d in range(len(value))],        
         )
     )
     TOOLS = "hover,save,wheel_zoom,pan,reset"
