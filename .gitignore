@@ -47,4 +47,5 @@ nosetests.xml
 *.tif
 *.tiff
 
+*.*~
 
