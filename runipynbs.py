@@ -65,4 +65,5 @@ def run_notebook(nbpath):
 
 
 if __name__ == '__main__':
+    print('STARTING RUNIPYNBS.PY\n')
     main()
