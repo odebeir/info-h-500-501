@@ -65,12 +65,5 @@ def run_notebook(nbpath):
 
 
 if __name__ == '__main__':
-    print(80*'*')
-    print('STARTING RUNIPYNBS.PY\nADDING CURRENT DIR TO PATH')
-    import os
-    import sys
-    #sys.path.insert(0,os.getcwd())
-    print(sys.path)
-    print(80*'*')
-
+    
     main()
