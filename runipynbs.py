@@ -69,7 +69,7 @@ if __name__ == '__main__':
     print('STARTING RUNIPYNBS.PY\nADDING CURRENT DIR TO PATH')
     import os
     import sys
-    sys.path.insert(0,os.getcwd())
+    #sys.path.insert(0,os.getcwd())
     print(sys.path)
     print(80*'*')
 
