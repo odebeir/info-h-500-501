@@ -1,10 +1,7 @@
-
-
-
-Introduction to image processing [![Build Status](https://travis-ci.org/odebeir/info-h-500-501.png?branch=master)]
-(https://travis-ci.org/odebeir/info-h-500-501)
-
+Introduction to image processing 
 ================================
+
+[![Build Status](https://travis-ci.org/odebeir/info-h-500-501.png?branch=master)](https://travis-ci.org/odebeir/info-h-500-501)
 
 Outline
 -------
