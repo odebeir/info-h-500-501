@@ -49,3 +49,8 @@ nosetests.xml
 
 *.*~
 
+*.html
+
+/archive
+
+
