@@ -74,7 +74,8 @@ def bk_compare_image(ima1,ima2,width=300,height=300):
     """
     img1,m1,n1 = ima_to_rgba32(ima1)
     img2,m2,n2 = ima_to_rgba32(ima2)
-    s1 = figure(width=width, plot_height=height, title=None)
+    s1 = figure(width=width, plot_height=height, 
+                x_range=[0,n1],y_range=[0,m1],title=None)
     s1.image_rgba(image=[img1], x=[0], y=[0], dw=[n1], dh=[m1])
     s2 = figure(width=width, plot_height=height,x_range=s1.x_range, y_range=s1.y_range,
                 title=None)
