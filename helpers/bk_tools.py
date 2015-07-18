@@ -2,6 +2,7 @@ from __future__ import division
 
 from collections import OrderedDict
 import numpy as np
+from bokeh.io import gridplot
 from bokeh.plotting import figure, show
 from bokeh.models.glyphs import Text
 from bokeh.models import HoverTool, ColumnDataSource
@@ -67,7 +68,20 @@ def bk_image(ima,title="",flip=False):
     else:
         fig.image_rgba(image=[img], x=[0], y=[0], dw=[n], dh=[m])
     show(fig);  # open a browser
-    
+
+def bk_compare_image(ima1,ima2,width=300,height=300):
+    """ Display 
+    """
+    img1,m1,n1 = ima_to_rgba32(ima1)
+    img2,m2,n2 = ima_to_rgba32(ima2)
+    s1 = figure(width=width, plot_height=height, title=None)
+    s1.image_rgba(image=[img1], x=[0], y=[0], dw=[n1], dh=[m1])
+    s2 = figure(width=width, plot_height=height,x_range=s1.x_range, y_range=s1.y_range,
+                title=None)
+    s2.image_rgba(image=[img2], x=[0], y=[0], dw=[n2], dh=[m2])
+    p = gridplot([[s1, s2]], toolbar_location=None)
+    show(p)
+
 def bk_image_hoover(ima,show_xy=False,show_value=True):
     """ Display a simple image in Bokeh mode + hoover tool (level + pixel coordinates)
     """
