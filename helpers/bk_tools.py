@@ -69,11 +69,15 @@ def bk_image(ima,title="",flip=False):
         fig.image_rgba(image=[img], x=[0], y=[0], dw=[n], dh=[m])
     show(fig);  # open a browser
 
-def bk_compare_image(ima1,ima2,width=300,height=300):
+def bk_compare_image(ima1,ima2,width=300,height=300,flip=False):
     """ Display 
     """
-    img1,m1,n1 = ima_to_rgba32(ima1)
-    img2,m2,n2 = ima_to_rgba32(ima2)
+    if flip:
+        img1,m1,n1 = ima_to_rgba32(ima1[-1::-1,:])
+        img2,m2,n2 = ima_to_rgba32(ima2[-1::-1,:])
+    else:
+        img1,m1,n1 = ima_to_rgba32(ima1)
+        img2,m2,n2 = ima_to_rgba32(ima2)
     s1 = figure(width=width, plot_height=height, 
                 x_range=[0,n1],y_range=[0,m1],title=None)
     s1.image_rgba(image=[img1], x=[0], y=[0], dw=[n1], dh=[m1])
