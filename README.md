@@ -41,6 +41,9 @@ Acknowledgements
 ULB
 
 inspired by Greg Caporaso's Introduction to <a href="https://github.com/gregcaporaso/An-Introduction-To-Applied-Bioinformatics">Applied Bioinformatics</a>
+
+get style from [CFDPython](https://github.com/barbagroup/CFDPython)
+
 License
 -------
 
