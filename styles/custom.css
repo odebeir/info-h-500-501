@@ -65,8 +65,11 @@
     .warning{
         color: rgb( 240, 20, 20 )
         }
-
-    ol {
+    
+    ol ol li {
+        list-style-type: decimal;
+    }
+    /*ol {
     counter-reset: num -1;
     }
     ol li {
@@ -75,7 +78,7 @@
     ol li:before {
         counter-increment: num;
         content: counter(num) ". ";
-    }
+    }*/
 </style>
 <script>
     MathJax.Hub.Config({
