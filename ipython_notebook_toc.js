@@ -19,9 +19,13 @@ function createTOC(){
     var levels = {}
     $('#toc').html('');
 
-    $(":header").each(function(i){
+    $("h1,h2,h3").each(function(i){
 	    if (this.id=='tocheading'){return;}
         
+        //dirty hack to avoid TOC entry caused by Bokeh plots
+        //$("h1,h2,h3").each <> $(":header").each
+        //console.log(this);        
+
 	    titleText = this.innerHTML;
 	    openLevel = this.tagName[1];
 
@@ -63,4 +67,10 @@ function createTOC(){
 setTimeout(function(){createTOC();},100);
 
 // Rebuild to TOC every minute
-setInterval(function(){createTOC();},60000);
+//setInterval(function(){createTOC();},60000);
+
+// Wait for the completely page download
+//$(window).ready(function(){createTOC()};)
+//$(window).load(createTOC()})
+
+

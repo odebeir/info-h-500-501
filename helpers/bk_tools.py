@@ -84,7 +84,7 @@ def bk_compare_image(ima1,ima2,width=300,height=300,flip=False):
     s2 = figure(width=width, plot_height=height,x_range=s1.x_range, y_range=s1.y_range,
                 title=None)
     s2.image_rgba(image=[img2], x=[0], y=[0], dw=[n2], dh=[m2])
-    p = gridplot([[s1, s2]], toolbar_location=None)
+    p = gridplot([[s1, s2]], toolbar_location='left')
     show(p)
 
 def bk_image_hoover(ima,show_xy=False,show_value=True):
