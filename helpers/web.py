@@ -1,4 +1,5 @@
-from IPython.display import HTML
+import os
+import time
 
 show_hide = '''<script>code_show=true; 
     function code_toggle() {
@@ -82,3 +83,15 @@ def chapters_to_html(path='.',title='Outline'):
     d += "</ol>\n"
     return md
     
+def header():
+    try:
+        css = open("../styles/custom.css", "r").read()
+    except:
+        css = open("./styles/custom.css", "r").read() # when running from Travis
+
+    html = css
+    html += '<a href="./content.ipynb"><< back to chapter content</a>'
+    html += '<p>Last updated: %s </p>'%time.strftime('%d/%m/%Y')
+    html += show_hide
+
+    return html
