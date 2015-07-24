@@ -83,14 +83,18 @@ def chapters_to_html(path='.',title='Outline'):
     d += "</ol>\n"
     return md
     
-def header():
+def header(content=False):
     try:
         css = open("../styles/custom.css", "r").read()
     except:
         css = open("./styles/custom.css", "r").read() # when running from Travis
 
     html = css
-    html += '<a href="./content.ipynb"><< back to chapter content</a>'
+    if content:
+        html += '<a href="../Index.ipynb"><< back to table of content</a>'
+        html += files_to_html(title='')
+    else:
+        html += '<a href="./content.ipynb"><< back to chapter content</a>'
     html += '<p>Last updated: %s </p>'%time.strftime('%d/%m/%Y')
     html += show_hide
 
