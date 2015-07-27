@@ -95,11 +95,11 @@ def header(content=False):
         html += '<a href="../Index.ipynb"><< back to table of content</a>'
         html += '<br><div id="toc"></div>'
         html += files_to_html(title='')
+
     else:
         html += "<script>$.getScript('../ipython_notebook_toc.js');</script>"
         html += '<a href="./content.ipynb"><< back to chapter content</a>'
         html += '<br><div id="toc"></div>'
     html += '<p>Last updated: %s </p>'%time.strftime('%d/%m/%Y')
     html += show_hide
-
     return html

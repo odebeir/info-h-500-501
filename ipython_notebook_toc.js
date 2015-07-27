@@ -64,13 +64,13 @@ function createTOC(){
 };
 
 // Executes the createToc function
-setTimeout(function(){createTOC();},3000);
+setTimeout(function(){createTOC();},5000);
 
 // Rebuild to TOC every minute
 //setInterval(function(){createTOC();},60000);
 
 // Wait for the completely page download
-//$(window).ready(function(){createTOC()};)
+//$(document).ready(createTOC);
 //$(window).load(createTOC()})
 
 
