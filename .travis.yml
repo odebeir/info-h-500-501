@@ -35,5 +35,6 @@ script:
 
 notifications:
   email: false
-  sudo: false
+
+sudo: false
 
