@@ -77,9 +77,9 @@ def chapters_to_html(path='.',title='Outline'):
     md = "<h1>\n%s\n</h1>\n"%(title)
     md += "<ol start=0>\n"
     for chap in chapters:
-        link = '%s/content.ipynb'%chap
+        link = '%s/content.ipynb'%os.path.join(path,chap)
         md += '<li><a href="%s">%s</a></li>'%(link,chap[3:])
-        md += files_to_html(path=chap,title=None)
+        md += files_to_html(path=os.path.join(path,chap),title=None)
     d += "</ol>\n"
     return md
     
