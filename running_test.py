@@ -11,14 +11,14 @@ def parse(root):
     dirs = sorted([dn for dn in os.listdir(root) if '00'<dn<'99'])
     r = []
     for sub_dir in dirs:
-        f = sorted([os.path.join(sub_dir,fn) for fn in os.listdir(os.path.join(root,sub_dir)) if ('00'<fn<'99' or fn.startswith('content')) and fn.endswith('.ipynb')])
+        f = sorted([os.path.join(root,sub_dir,fn) for fn in os.listdir(os.path.join(root,sub_dir)) if ('00'<fn<'99' or fn.startswith('content')) and fn.endswith('.ipynb')])
         r.extend(f)
     return r
 
 nb_filenames = ["Index.ipynb","Index-labs1-6.ipynb"]
 
-nb_filenames.extend(parse('.'))
 nb_filenames.extend(parse('./LABS'))
+nb_filenames.extend(parse('.'))
 
 for nb_filename in nb_filenames:
     print('*'*80)
