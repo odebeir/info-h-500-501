@@ -28,6 +28,6 @@ for nb_filename in nb_filenames:
     r = NotebookRunner(notebook)
     try:
         r.run_notebook()
-    except ValueError:
-        print('Value error')
-    
+    except:
+        print('error in notebook')
+
