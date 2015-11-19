@@ -33,7 +33,8 @@ install:
 
 script:
   # Your test script goes here
-  - nosetests --with-doctest && python runipynbs.py
+  # - nosetests --with-doctest && python runipynbs.py
+  - python running_test.py
 
 notifications:
   email: false
