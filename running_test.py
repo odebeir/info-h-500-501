@@ -26,9 +26,6 @@ for nb_filename in nb_filenames:
     print('*'*80)
     notebook = read(open(nb_filename), 'json')
     r = NotebookRunner(notebook)
-    try:
-        r.run_notebook()
-        r.shutdown_kernel()
-    except:
-        print('error in notebook')
-
+    r.run_notebook()
+    r.shutdown_kernel()
+    
