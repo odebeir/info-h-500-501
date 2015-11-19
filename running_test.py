@@ -28,6 +28,7 @@ for nb_filename in nb_filenames:
     r = NotebookRunner(notebook)
     try:
         r.run_notebook()
+        r.shutdown_kernel()
     except:
         print('error in notebook')
 
