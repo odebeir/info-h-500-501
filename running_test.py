@@ -28,4 +28,4 @@ for nb_filename in nb_filenames:
     r = NotebookRunner(notebook)
     r.run_notebook()
     r.shutdown_kernel()
-    
+
