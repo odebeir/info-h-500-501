@@ -55,3 +55,7 @@ nosetests.xml
 
 /runipy
 
+data/
+biblio/
+
+
