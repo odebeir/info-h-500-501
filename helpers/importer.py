@@ -1,7 +1,7 @@
-from future.standard_library import install_aliases
-install_aliases()
+#from future.standard_library import install_aliases
+#install_aliases()
 
-from urllib.request import urlopen
+from urllib2 import urlopen
 from skimage.io import imread
 import os
 
