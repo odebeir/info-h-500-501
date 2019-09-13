@@ -69,6 +69,7 @@ for fn,e, ex_type, ex_value, ex_traceback in error_list:
     print("Filename : %s " % fn)
     print("Exception type : %s " % ex_type.__name__)
     print("Exception message : %s" % ex_value)
+    print("Exception message : %s" % str(e))
     print("Stack trace :\n%s" % '\n'.join(stack_trace))
     print('_' * 80)
     print('\n')
