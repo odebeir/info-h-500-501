@@ -63,7 +63,8 @@ for fn,e, ex_type, ex_value, ex_traceback in error_list:
     print("Exception type : %s " % ex_type.__name__)
     print("Exception message : %s" % ex_value)
     print("Stack trace :\n%s" % '\n'.join(stack_trace))
-    print('-' * 80)
+    print('_' * 80)
+    print('\n')
 
 if is_error: # raise one exception if any problem occured
     raise Exception
