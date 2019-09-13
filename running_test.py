@@ -1,8 +1,8 @@
 __author__ = 'olivier'
 
 from runipy.notebook_runner import NotebookRunner
-#from IPython.nbformat.current import read
-from nbformat import read
+from IPython.nbformat.current import read
+#from nbformat import read
 import os
 import sys
 import traceback
