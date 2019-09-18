@@ -4,13 +4,11 @@ import os
 
 is_travis = 'TRAVIS' in os.environ
 
-if is_travis:
-    from runipy.notebook_runner import NotebookRunner
-else:
-    from runipy.runipy.notebook_runner import NotebookRunner
+from runipy.notebook_runner import NotebookRunner
 
-from IPython.nbformat.current import read
+#from IPython.nbformat.current import read
 #from nbformat import read
+from nbformat.current import read
 import sys
 import traceback
 
@@ -37,7 +35,7 @@ for nb_filename in nb_filenames:
     try:
         print('*'*80)
         print(nb_filename)
-        print('*'*80)
+
         notebook = read(open(nb_filename), 'json')
         r = NotebookRunner(notebook)
         r.run_notebook()
@@ -47,9 +45,11 @@ for nb_filename in nb_filenames:
         is_error = True
         # Get current system exception
         ex_type, ex_value, ex_traceback = sys.exc_info()
-
         error_list.append((nb_filename,e,ex_type, ex_value, ex_traceback))
+        print('! error'+str(e))
 
+    finally:
+        print('*' * 80)
 
 # display the summary of all the exceptions
 for fn,e, ex_type, ex_value, ex_traceback in error_list:
