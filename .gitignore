@@ -1,3 +1,5 @@
+.gitignore
+
 *.py[cod]
 
 # C extensions
@@ -58,4 +60,29 @@ nosetests.xml
 data/
 biblio/
 
+# images
+*.ppm
+*.pgm
 
+LABS/solved/*
+*solved.*
+
+*.zip
+
+LABS1/CIFAR_Dataset.ipynb
+LABS1/CIFAR10/*
+LABS1/Basics of Image Processing.ipynb
+LABS1/Lab4.ipynb
+LABS1/*.docx
+LABS1/cp.jpg
+LABS1/nature31.jpg
+
+LABS1/01-Plate detection/convert_images.ipynb
+LABS1/01-Plate detection/day*.ppm.png
+
+LABS1/04-Video/Crowded3.flv
+LABS1/04-Video/video.txt
+LABS1/04-Video/GroundTruth/*.png
+LABS1/04-Video/Prediction/*.npy
+LABS1/GroundTruth/*.png
+LABS1/Video/*.jpg
