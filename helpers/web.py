@@ -73,7 +73,7 @@ def chapters_to_html(path='.',title='Outline'):
     > HTML(chapters_to_html())
     """
     d = os.listdir(path)
-    chapters = sorted([s for s in d if ('00'<=s<='99')])
+    chapters = sorted([s for s in d if ('00'<=s<='99') and os.path.isdir(os.path.join(path,s))])
     md = "<h1>\n%s\n</h1>\n"%(title)
     md += "<ol start=0>\n"
     for chap in chapters:

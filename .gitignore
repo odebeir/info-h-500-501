@@ -86,3 +86,5 @@ LABS1/04-Video/GroundTruth/*.png
 LABS1/04-Video/Prediction/*.npy
 LABS1/GroundTruth/*.png
 LABS1/Video/*.jpg
+
+pdf/
